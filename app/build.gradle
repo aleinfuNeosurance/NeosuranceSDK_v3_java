@@ -10,8 +10,8 @@ android {
         applicationId "eu.nsrsdk.android"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "3.0.1"
     }
 
     buildTypes {
@@ -35,5 +35,6 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.1'
     implementation 'androidx.navigation:navigation-ui:2.3.1'
     implementation project(path: ':NeosuranceSDK_v3_java')
+    //implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.1'
 
 }
