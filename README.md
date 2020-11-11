@@ -1,4 +1,4 @@
-# ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png) Android - Neosurance SDK v3.0.2 Java
+# ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png) Android - Neosurance SDK v3.0.3 Java
 
 - Collects info from device sensors and from the hosting app
 - Exchanges info with the AI engines
@@ -95,7 +95,6 @@ it, simply add the following line to your project:
 	-keep class * implements eu.neosurance.sdk.NSRWorkflowDelegate { *; }
 	-keep class * implements eu.neosurance.sdk.NSRPushDelegate { *; }
 	```
-
 
 ## Settings
 
