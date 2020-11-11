@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NeosuranceSDK_v3.iml" filepath="$PROJECT_DIR$/.idea/modules/NeosuranceSDK_v3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NeosuranceSDK_v3_java/NeosuranceSDK_v3.NeosuranceSDK_v3_java.iml" filepath="$PROJECT_DIR$/.idea/modules/NeosuranceSDK_v3_java/NeosuranceSDK_v3.NeosuranceSDK_v3_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NeosuranceSDK_v3.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NeosuranceSDK_v3.app.iml" />
+    </modules>
+  </component>
+</project>
