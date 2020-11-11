@@ -1,0 +1,3 @@
+include ':NeosuranceSDK_v3_java'
+include ':app'
+rootProject.name = "NeosuranceSDK_v3"

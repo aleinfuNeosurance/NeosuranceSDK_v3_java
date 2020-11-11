@@ -1,0 +1,5 @@
+R_DEF: Internal format may change without notice
+local
+drawable nsr_logo
+raw push
+xml file_paths
