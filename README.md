@@ -28,7 +28,7 @@ it, simply add the following line to your project:
 	```gradle
 	dependencies {
 		...
-		implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.2'
+		implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.3'
 	}
 	```
 
