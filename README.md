@@ -34,7 +34,7 @@ it, simply add the following line to your project (see also [NSR SDK v3 JavaExam
 
 ## Requirements (be sure)
 
-1. Inside your **AndroidManifest.xml** be sure to have the following permissions:
+1. Inside your project **AndroidManifest.xml** be sure to have the following permissions:
 
 	```xml
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -49,7 +49,7 @@ it, simply add the following line to your project (see also [NSR SDK v3 JavaExam
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 	<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
 	```
-2. Inside your **nsr/src/main/AndroidManifest.xml** be sure to have the following statements:
+2. Inside NSR SDK library **NeosuranceSDK_v3_java/src/main/AndroidManifest.xml** be sure to have the following statements:
 
 	```xml
 	<receiver android:name="NSRBootReceiver">
