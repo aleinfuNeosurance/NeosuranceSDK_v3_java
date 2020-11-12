@@ -60,8 +60,8 @@ public class NSR {
 
 	protected NSR(Context ctx) {
 		this.ctx = ctx.getApplicationContext();
-		NSRShake nsrShake = new NSRShake();
-		setNSRShake(ctx,nsrShake);
+		//NSRShake nsrShake = new NSRShake();
+		//setNSRShake(ctx,nsrShake);
 	}
 
 	//********** GET_INSTANCE **********//
@@ -73,7 +73,7 @@ public class NSR {
 			instance = new NSR(ctx);
 			if (!NSRUtils.gracefulDegradate()) {
 				try {
-					instance.fences = new NSRFences(instance);
+					//instance.fences = new NSRFences(instance);
 
 					String s = NSRUtils.getData("securityDelegateClass", ctx);
 					if (s != null) {
@@ -175,10 +175,10 @@ public class NSR {
 
 	public static void continueInitJob() {
 		traceActivity();
-		traceFence();
-		traceNetworks();
 		traceLocation();
 		hardTraceLocation();
+		//traceFence();
+		//traceNetworks();
 	}
 
 	//********** TRACE ACTIVITY **********//

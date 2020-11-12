@@ -1,23 +1,23 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
 	package
 		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml
 		INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
 		INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-48:12
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:1-55:12
 		INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:2:11-69
@@ -66,85 +66,73 @@ ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/Neosur
 	android:name
 		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:15:22-91
 application
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:17:5-46:19
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:21:5-53:19
 receiver#eu.nsrsdk.v3java.NSRBootReceiver
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:18:9-22:20
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:22:9-26:20
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:18:19-49
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:22:19-49
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:19:13-21:29
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:23:13-25:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:20:17-79
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:24:17-79
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:20:25-76
-receiver#eu.nsrsdk.v3java.NSRFenceCallback
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:23:9-53
-	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:23:19-50
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:24:25-76
 receiver#eu.nsrsdk.v3java.NSRActivityCallback
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:24:9-56
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:29:9-56
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:24:19-53
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:29:19-53
 receiver#eu.nsrsdk.v3java.NSRDelayedPush
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:25:9-51
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:30:9-51
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:25:19-48
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:30:19-48
 receiver#eu.nsrsdk.v3java.NSRBackground
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:26:9-50
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:31:9-50
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:26:19-47
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:31:19-47
 receiver#eu.nsrsdk.utils.PackageChangeReceiver
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:28:9-35:20
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:33:9-40:20
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:28:19-71
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:33:19-71
 intent-filter#action:name:android.intent.action.ACTION_PACKAGE_REMOVED+action:name:android.intent.action.PACKAGE_FULLY_REMOVED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:29:13-34:29
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:34:13-39:29
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:30:17-79
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:35:17-79
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:30:25-77
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:35:25-77
 action#android.intent.action.PACKAGE_FULLY_REMOVED
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:31:17-86
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:36:17-86
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:31:25-83
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:36:25-83
 action#android.intent.action.ACTION_PACKAGE_REMOVED
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:32:17-86
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:37:17-86
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:32:25-84
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:37:25-84
 data
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:33:17-49
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:38:17-49
 	android:scheme
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:33:23-47
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:38:23-47
 service#eu.nsrsdk.v3java.NSRForeground
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:37:9-74
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:42:9-74
 	android:exported
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:37:47-71
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:42:47-71
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:37:18-46
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:42:18-46
 provider#androidx.core.content.FileProvider
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:39:9-41:20
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:44:9-46:20
 	android:grantUriPermissions
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:39:142-176
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:44:142-176
 	android:authorities
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:39:69-116
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:44:69-116
 	android:exported
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:39:117-141
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:44:117-141
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:39:19-68
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:44:19-68
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:40:13-112
+ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:45:13-112
 	android:resource
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:40:75-109
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:45:75-109
 	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:40:24-74
-activity#eu.nsrsdk.v3java.NSRActivityWebView
-ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:42:9-45:51
-	android:screenOrientation
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:45:13-49
-	android:configChanges
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:44:13-74
-	android:name
-		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:43:13-63
+		ADDED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml:45:24-74
 uses-sdk
 INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/ok_neosurance/Documents/_NSR_SDKs/NeosuranceSDK_v3_java/NeosuranceSDK_v3_java/src/main/AndroidManifest.xml

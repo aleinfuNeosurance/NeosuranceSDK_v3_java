@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Log.d(TAG," >>> " + NSR.TAG + " is ready!");
+        Log.d(TAG,"App >>> " + NSR.TAG + " is ready!");
 
     }
 }

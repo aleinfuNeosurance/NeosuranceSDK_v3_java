@@ -1,4 +1,4 @@
-# ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png) Android - Neosurance SDK v3.0.4 Java
+# ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png) Android - Neosurance SDK v3.0.5 Java
 
 - Collects info from device sensors and from the hosting app
 - Exchanges info with the AI engines
@@ -28,7 +28,7 @@ it, simply add the following line to your project:
 	```gradle
 	dependencies {
 		...
-		implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.4'
+		implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.5'
 	}
 	```
 
@@ -47,9 +47,6 @@ it, simply add the following line to your project:
 	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-	<uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
 	<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
 	```
 2. Inside your **nsr/src/main/AndroidManifest.xml** be sure to have the following statements:
@@ -71,7 +68,6 @@ it, simply add the following line to your project:
 	```
 	
 	```xml
-	<receiver android:name="NSRFenceCallback" />
 	<receiver android:name="NSRActivityCallback" />
 	<receiver android:name="NSRDelayedPush" />
 	<receiver android:name="NSRBackground" />	
@@ -261,7 +257,7 @@ it, simply add the following line to your project:
 ## Usage (Sample Demo Flow)
 1. Tap on button => *"Setup"* (see 1. [setup](#setup))
 2. Tap on button => *"registerUser"* (see 5. [registerUser](#register-user))
-3. [4.] Tap on button => *"sendEvent_1"* (and/or *"sendEvent_2"*, and/or *"sendEventPush"* and/or *"sendEventPush_2"*) (see 9. [sendEvent](#send-event))
+3. [4.] Tap on button => *"sendEvent"* (and/or *"sendEventPush"*) (see 9. [sendEvent](#send-event))
 4. [3.] Tap on button => *"showApp"* In order to show "Purchases List" or "buy a new insurance policy"(just tapping on the title)) (see 7. [showApp](#show-app))
 
 ## Author
