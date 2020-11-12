@@ -10,7 +10,7 @@
 ## Installation
 
 NeosuranceSDK is available through [jitpack](https://jitpack.io/). To install
-it, simply add the following line to your project:
+it, simply add the following line to your project (see also [NSR SDK v3 JavaExample](https://github.com/aleinfuNeosurance/NeosuranceSDK_v3_java_example)):
 
 1. Add it in your root **gradle** file at the end of repositories:
 
