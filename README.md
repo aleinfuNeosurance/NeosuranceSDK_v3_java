@@ -2,9 +2,9 @@
 
 - Collects info from device sensors and from the hosting app
 - Exchanges info with the AI engines
-- Sends the push notification
+- Sends push notifications
 - Displays a landing page
-- Displays the list of the purchased policies
+- Displays a list of purchased policies
 
 
 ## Installation
