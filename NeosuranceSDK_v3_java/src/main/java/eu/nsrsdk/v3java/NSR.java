@@ -159,7 +159,7 @@ public class NSR {
 	public static void initJob() {
 		NSRLog.d("initJob");
 		try {
-			stopTraceFence();
+			//stopTraceFence();
 			stopHardTraceLocation();
 			stopTraceActivity();
 
