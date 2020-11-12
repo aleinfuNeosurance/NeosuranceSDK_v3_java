@@ -30,13 +30,10 @@ public class NSRLocationCallback extends LocationCallback {
 		nsr.opportunisticTrace();
 		nsr.checkHardTraceLocation();
 
-		String ssid = nsr.getCurrentSsid(nsr.ctx);
-		if(ssid != null && ssid.contains("\""))
-			ssid = ssid.split("\"")[1];
 		boolean foreground = nsr.isAppOnForeground(nsr.ctx,nsr.ctx.getPackageName());
 		String appStatus = (foreground) ? "foreground" : "background";
 
-		NSRLog.d("NSRLocationCallback foreground: " + foreground + ", ssid: " + ssid);
+		NSRLog.d("NSRLocationCallback foreground: " + foreground);
 
 		Location lastLocation = locationResult.getLastLocation();
 		if (lastLocation != null) {
@@ -54,8 +51,6 @@ public class NSRLocationCallback extends LocationCallback {
 					payload.put("longitude", lastLocation.getLongitude());
 					payload.put("altitude", lastLocation.getAltitude());
 					payload.put("appstatus", appStatus);
-					if(ssid != null)
-						payload.put("ssid", ssid);
 					nsr.crunchEvent("position", payload,nsr.ctx);
 					NSRLog.d("NSRLocationCallback sent");
 				}
@@ -67,8 +62,6 @@ public class NSRLocationCallback extends LocationCallback {
 					payload.put("longitude", lastLocation.getLongitude());
 					payload.put("altitude", lastLocation.getAltitude());
 					payload.put("appstatus", appStatus);
-					if(ssid != null)
-						payload.put("ssid", ssid);
 					nsr.crunchEvent("position", payload,nsr.ctx);
 					NSRLog.d("NSRLocationCallback sent");
 				} else {

@@ -1,4 +1,4 @@
-# ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png) Android - Neosurance SDK v3.0.10 Java
+# ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png) Android - Neosurance SDK v3.0.11 Java
 
 - Collects info from device sensors and from the hosting app
 - Exchanges info with the AI engines
@@ -28,7 +28,7 @@ it, simply add the following line to your project:
 	```gradle
 	dependencies {
 		...
-		implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.10'
+		implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.11'
 	}
 	```
 
