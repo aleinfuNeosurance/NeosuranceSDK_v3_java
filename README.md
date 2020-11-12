@@ -1,4 +1,4 @@
-# ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png) Android - Neosurance SDK v3.0.11 Java
+# ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/32px-Android_robot.svg.png) Android - Neosurance SDK v3 Java
 
 - Collects info from device sensors and from the hosting app
 - Exchanges info with the AI engines
@@ -52,14 +52,6 @@ it, simply add the following line to your project:
 2. Inside your **nsr/src/main/AndroidManifest.xml** be sure to have the following statements:
 
 	```xml
-	<activity
-		android:name="eu.neosurance.sdk.NSRActivityWebView"
-		android:configChanges="orientation|screenSize|keyboardHidden"
-		android:screenOrientation="portrait"
-		android:theme="@style/AppTheme.NSRWebView" />
-	```
-	
-	```xml
 	<receiver android:name="NSRBootReceiver">
 		<intent-filter>
 			<action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -70,7 +62,16 @@ it, simply add the following line to your project:
 	```xml
 	<receiver android:name="NSRActivityCallback" />
 	<receiver android:name="NSRDelayedPush" />
-	<receiver android:name="NSRBackground" />	
+	<receiver android:name="NSRBackground" />
+	
+    <receiver android:name="eu.nsrsdk.utils.PackageChangeReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+            <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+            <action android:name="android.intent.action.ACTION_PACKAGE_REMOVED"/>
+            <data android:scheme="package"/>
+        </intent-filter>
+    </receiver>
 	```
 	
 	```xml
@@ -78,10 +79,11 @@ it, simply add the following line to your project:
 	```
 	
 	```xml
-	<provider android:name="android.support.v4.content.FileProvider" android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true">
-		<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
-	</provider>
+    <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true">
+        <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+    </provider>
 	```
+
 
 3. Inside your **proguard-rules.pro** be sure to have the following rules:
 	
@@ -245,13 +247,6 @@ it, simply add the following line to your project:
 	payload.put("latitude", latitude);
 	payload.put("longitude", longitude);
 	NSR.getInstance(this).sendEvent("position", payload);
-	```
-	
-10. ### sendAction *optional*
-	The application can send tracing information events to the system with **sendAction** method
-	
-	```java          
-	NSR.getInstance(this).sendAction("read", "xxxx123xxxx", "general condition read");
 	```
 
 ## Usage (Sample Demo Flow)
