@@ -31,7 +31,10 @@ eu/nsrsdk/v3java/NSREvent.java
  eu.nsrsdk.v3java.NSREvent$2$1
 eu/nsrsdk/v3java/NSRDefaultSecurity.java
  eu.nsrsdk.v3java.NSRDefaultSecurity
+ eu.nsrsdk.v3java.NSRDefaultSecurity$1
  eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequest
+ eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequestCustom
+ eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequestCustom$1
 eu/nsrsdk/v3java/NSRForeground.java
  eu.nsrsdk.v3java.NSRForeground
 eu/nsrsdk/v3java/NSRHttpRunner.java

@@ -185,7 +185,7 @@ public class NSRTrace {
     //**** OPPORTUNISTIC_TRACE
 
     public static void opportunisticTrace(Context ctx) {
-        NSR.tracePower();
+        //NSR.tracePower();
         NSR.traceConnection();
         try {
             String locationAuth = "notAuthorized";

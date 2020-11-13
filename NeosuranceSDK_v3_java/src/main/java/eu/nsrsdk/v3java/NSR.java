@@ -227,10 +227,6 @@ public class NSR {
 		NSRTrace.traceLocation(ctx);
 	}
 
-	public static void traceNetworks(){
-		NSRTrace.traceNetworks(ctx);
-	}
-
 	public static void hardTraceLocation() {
 		NSRTrace.hardTraceLocation(ctx);
 	}
@@ -244,6 +240,13 @@ public class NSR {
 	public void opportunisticTrace() {
 		NSRTrace.opportunisticTrace(ctx);
 	}
+
+	//********** TRACE NETWORKS **********//
+
+	public static void traceNetworks(){
+		NSRTrace.traceNetworks(ctx);
+	}
+
 
 	public static String getLastLocationAuth() {
 		return NSRTrace.getLastLocationAuth(ctx);
