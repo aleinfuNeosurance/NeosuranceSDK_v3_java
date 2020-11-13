@@ -61,54 +61,50 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 			this.headers = headers;
 			this.completionHandler = completionHandler;
 
-			if(this.nsrNHandlerThread != null) {
+			Handler asyncHandler = new Handler(this.nsrNHandlerThread.getLooper());
 
-				Handler asyncHandler = new Handler(this.nsrNHandlerThread.getLooper());
+			Runnable runnable = new Runnable() {
+				@Override
+				public void run() {
+					// your async code goes here.
 
-				Runnable runnable = new Runnable() {
-					@Override
-					public void run() {
-						// your async code goes here.
+					NSRHttpRunner httpRunner = null;
 
-						NSRHttpRunner httpRunner = null;
+					try {
 
-						try {
+						httpRunner = new NSRHttpRunner(url);
 
-							httpRunner = new NSRHttpRunner(url);
+						if (payload != null)
+							httpRunner.payload(payload.toString(), "application/json");
 
-							if (payload != null)
-								httpRunner.payload(payload.toString(), "application/json");
-
-							if (headers != null) {
-								Iterator<String> keys = headers.keys();
-								while (keys.hasNext()) {
-									String key = keys.next();
-									httpRunner.header(key, headers.getString(key));
-								}
-							}
-							String response = httpRunner.read();
-							NSRLog.d("NSRDefaultSecurity response:" + response);
-
-							completionHandler.completionHandler(new JSONObject(response), null);
-
-						} catch (Exception e) {
-							try {
-								if (httpRunner != null) {
-									NSRLog.e("MSG:" + httpRunner.getMessage());
-									NSRLog.e("Error:" + e.getMessage());
-								}
-								completionHandler.completionHandler(null, e.toString());
-							} catch (Exception ee) {
-								NSRLog.e(ee.toString());
+						if (headers != null) {
+							Iterator<String> keys = headers.keys();
+							while (keys.hasNext()) {
+								String key = keys.next();
+								httpRunner.header(key, headers.getString(key));
 							}
 						}
+						String response = httpRunner.read();
+						NSRLog.d("NSRDefaultSecurity response:" + response);
 
+						completionHandler.completionHandler(new JSONObject(response), null);
+
+					} catch (Exception e) {
+						try {
+							if (httpRunner != null) {
+								NSRLog.e("MSG:" + httpRunner.getMessage());
+								NSRLog.e("Error:" + e.getMessage());
+							}
+							completionHandler.completionHandler(null, e.toString());
+						} catch (Exception ee) {
+							NSRLog.e(ee.toString());
+						}
 					}
-				};
 
-				asyncHandler.post(runnable);
+				}
+			};
 
-			}
+			asyncHandler.post(runnable);
 
 		}
 
