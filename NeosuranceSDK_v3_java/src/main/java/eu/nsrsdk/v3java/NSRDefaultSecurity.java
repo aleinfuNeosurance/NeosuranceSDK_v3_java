@@ -27,12 +27,11 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 			String url = NSRUtils.getSettings(ctx).getString("base_url") + endpoint;
 			NSRLog.d("NSRDefaultSecurity: " + url);
 
-			if(asynchRequestCustom == null)
-				asynchRequestCustom = new AsynchRequestCustom(nsrNetworkingHandlerThread);
-
 			if(nsrNetworkingHandlerThread == null)
 				nsrNetworkingHandlerThread = new HandlerThread("nsrNetworkingHandlerThread");
 
+			if(asynchRequestCustom == null)
+				asynchRequestCustom = new AsynchRequestCustom(nsrNetworkingHandlerThread);
 
 			asynchRequestCustom.doAsyncTask(url, payload, headers, completionHandler);
 
