@@ -48,7 +48,7 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 		public JSONObject headers;
 		public NSRSecurityResponse completionHandler;
 
-		public HandlerThread nsrNHandlerThread;
+		public HandlerThread nsrNHandlerThread = null;
 
 		public AsynchRequestCustom(HandlerThread nsrNetworkingHandlerThread) {
 			this.nsrNHandlerThread = nsrNetworkingHandlerThread;
@@ -60,6 +60,9 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 			this.payload = payload;
 			this.headers = headers;
 			this.completionHandler = completionHandler;
+
+			if(this.nsrNHandlerThread == null)
+				this.nsrNHandlerThread = new HandlerThread("nsrNetworkingHandlerThread");
 
 			Handler asyncHandler = new Handler(this.nsrNHandlerThread.getLooper());
 
