@@ -6,7 +6,9 @@ import android.os.Build;
 
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Message;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
 import org.json.JSONException;
@@ -30,6 +32,7 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 
 			if(nsrNetworkingHandlerThread == null)
 				nsrNetworkingHandlerThread = new HandlerThread("nsrNetworkingHandlerThread");
+
 
 			asynchRequestCustom.doAsyncTask(url, payload, headers, completionHandler);
 
@@ -64,7 +67,13 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 			if(this.nsrNHandlerThread == null)
 				this.nsrNHandlerThread = new HandlerThread("nsrNetworkingHandlerThread");
 
-			Handler asyncHandler = new Handler(this.nsrNHandlerThread.getLooper());
+			Handler asyncHandler = new Handler(this.nsrNHandlerThread.getLooper()){
+				@Override
+				public void handleMessage(@NonNull Message msg) {
+					super.handleMessage(msg);
+					//Object response = msg.obj;
+				}
+			};
 
 			Runnable runnable = new Runnable() {
 				@Override
