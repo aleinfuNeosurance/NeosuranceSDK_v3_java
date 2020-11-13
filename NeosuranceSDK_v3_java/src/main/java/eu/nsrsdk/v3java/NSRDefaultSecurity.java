@@ -17,7 +17,8 @@ import eu.nsrsdk.utils.NSRUtils;
 @RequiresApi(api = Build.VERSION_CODES.KITKAT)
 public class NSRDefaultSecurity implements NSRSecurityDelegate {
 
-	private static AsynchRequestCustom asynchRequestCustom;
+	private static AsynchRequestCustom asynchRequestCustom = null;
+	private static HandlerThread nsrNetworkingHandlerThread = null;
 
 	public void secureRequest(final Context ctx, final String endpoint, final JSONObject payload, final JSONObject headers, final NSRSecurityResponse completionHandler) throws Exception {
 		try {
@@ -25,7 +26,10 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 			NSRLog.d("NSRDefaultSecurity: " + url);
 
 			if(asynchRequestCustom == null)
-				asynchRequestCustom = new AsynchRequestCustom();
+				asynchRequestCustom = new AsynchRequestCustom(nsrNetworkingHandlerThread);
+
+			if(nsrNetworkingHandlerThread == null)
+				nsrNetworkingHandlerThread = new HandlerThread("nsrNetworkingHandlerThread");
 
 			asynchRequestCustom.doAsyncTask(url, payload, headers, completionHandler);
 
@@ -44,7 +48,11 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 		public JSONObject headers;
 		public NSRSecurityResponse completionHandler;
 
-		private HandlerThread nsrNetworkingHandlerThread;
+		public HandlerThread nsrNHandlerThread;
+
+		public AsynchRequestCustom(HandlerThread nsrNetworkingHandlerThread) {
+			this.nsrNHandlerThread = nsrNetworkingHandlerThread;
+		}
 
 		public void doAsyncTask(final String url, final JSONObject payload, final JSONObject headers, final NSRSecurityResponse completionHandler) {
 
@@ -53,56 +61,56 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 			this.headers = headers;
 			this.completionHandler = completionHandler;
 
-			if(this.nsrNetworkingHandlerThread == null)
-				this.nsrNetworkingHandlerThread = new HandlerThread("nsrNetworkingHandlerThread");
+			if(this.nsrNHandlerThread != null) {
 
-			Handler asyncHandler = new Handler(this.nsrNetworkingHandlerThread.getLooper());
+				Handler asyncHandler = new Handler(this.nsrNHandlerThread.getLooper());
 
-			Runnable runnable = new Runnable() {
-				@Override
-				public void run() {
-					// your async code goes here.
+				Runnable runnable = new Runnable() {
+					@Override
+					public void run() {
+						// your async code goes here.
 
-					NSRHttpRunner httpRunner = null;
+						NSRHttpRunner httpRunner = null;
 
-					try {
-
-						httpRunner = new NSRHttpRunner(url);
-
-						if (payload != null)
-							httpRunner.payload(payload.toString(), "application/json");
-
-						if (headers != null) {
-							Iterator<String> keys = headers.keys();
-							while (keys.hasNext()) {
-								String key = keys.next();
-								httpRunner.header(key, headers.getString(key));
-							}
-						}
-						String response = httpRunner.read();
-						NSRLog.d("NSRDefaultSecurity response:" + response);
-
-						completionHandler.completionHandler(new JSONObject(response), null);
-
-					} catch (Exception e) {
 						try {
-							if (httpRunner != null) {
-								NSRLog.e("MSG:" + httpRunner.getMessage());
-								NSRLog.e("Error:" + e.getMessage());
+
+							httpRunner = new NSRHttpRunner(url);
+
+							if (payload != null)
+								httpRunner.payload(payload.toString(), "application/json");
+
+							if (headers != null) {
+								Iterator<String> keys = headers.keys();
+								while (keys.hasNext()) {
+									String key = keys.next();
+									httpRunner.header(key, headers.getString(key));
+								}
 							}
-							completionHandler.completionHandler(null, e.toString());
-						} catch (Exception ee) {
-							NSRLog.e(ee.toString());
+							String response = httpRunner.read();
+							NSRLog.d("NSRDefaultSecurity response:" + response);
+
+							completionHandler.completionHandler(new JSONObject(response), null);
+
+						} catch (Exception e) {
+							try {
+								if (httpRunner != null) {
+									NSRLog.e("MSG:" + httpRunner.getMessage());
+									NSRLog.e("Error:" + e.getMessage());
+								}
+								completionHandler.completionHandler(null, e.toString());
+							} catch (Exception ee) {
+								NSRLog.e(ee.toString());
+							}
 						}
+
 					}
+				};
 
-				}
-			};
+				asyncHandler.post(runnable);
 
-			asyncHandler.post(runnable);
+			}
 
 		}
-
 
 	}
 

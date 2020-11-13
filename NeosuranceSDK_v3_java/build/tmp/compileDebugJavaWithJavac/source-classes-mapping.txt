@@ -29,12 +29,22 @@ eu/nsrsdk/v3java/NSREvent.java
  eu.nsrsdk.v3java.NSREvent$1$1
  eu.nsrsdk.v3java.NSREvent$2
  eu.nsrsdk.v3java.NSREvent$2$1
-eu/nsrsdk/v3java/NSRDefaultSecurity.java
- eu.nsrsdk.v3java.NSRDefaultSecurity
- eu.nsrsdk.v3java.NSRDefaultSecurity$1
- eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequest
- eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequestCustom
- eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequestCustom$1
+eu/nsrsdk/v3java/NSRActivityWebView.java
+ eu.nsrsdk.v3java.NSRActivityWebView
+ eu.nsrsdk.v3java.NSRActivityWebView$1
+ eu.nsrsdk.v3java.NSRActivityWebView$10
+ eu.nsrsdk.v3java.NSRActivityWebView$11
+ eu.nsrsdk.v3java.NSRActivityWebView$11$1
+ eu.nsrsdk.v3java.NSRActivityWebView$12
+ eu.nsrsdk.v3java.NSRActivityWebView$2
+ eu.nsrsdk.v3java.NSRActivityWebView$3
+ eu.nsrsdk.v3java.NSRActivityWebView$4
+ eu.nsrsdk.v3java.NSRActivityWebView$5
+ eu.nsrsdk.v3java.NSRActivityWebView$5$1
+ eu.nsrsdk.v3java.NSRActivityWebView$6
+ eu.nsrsdk.v3java.NSRActivityWebView$7
+ eu.nsrsdk.v3java.NSRActivityWebView$8
+ eu.nsrsdk.v3java.NSRActivityWebView$9
 eu/nsrsdk/v3java/NSRForeground.java
  eu.nsrsdk.v3java.NSRForeground
 eu/nsrsdk/v3java/NSRHttpRunner.java
@@ -73,9 +83,8 @@ eu/nsrsdk/v3java/NSRLocationCallback.java
  eu.nsrsdk.v3java.NSRLocationCallback
 eu/nsrsdk/v3java/NSRPush.java
  eu.nsrsdk.v3java.NSRPush
-eu/nsrsdk/v3java/NSR.java
- eu.nsrsdk.v3java.NSR
- eu.nsrsdk.v3java.NSR$1
+eu/nsrsdk/v3java/NSRPower.java
+ eu.nsrsdk.v3java.NSRPower
 eu/nsrsdk/v3java/NSRUser.java
  eu.nsrsdk.v3java.NSRUser
  eu.nsrsdk.v3java.NSRUser$1
@@ -83,21 +92,11 @@ eu/nsrsdk/v3java/NSRUser.java
  eu.nsrsdk.v3java.NSRUser$2$1
 eu/nsrsdk/v3java/NSRConnection.java
  eu.nsrsdk.v3java.NSRConnection
-eu/nsrsdk/v3java/NSRActivityWebView.java
- eu.nsrsdk.v3java.NSRActivityWebView
- eu.nsrsdk.v3java.NSRActivityWebView$1
- eu.nsrsdk.v3java.NSRActivityWebView$10
- eu.nsrsdk.v3java.NSRActivityWebView$11
- eu.nsrsdk.v3java.NSRActivityWebView$11$1
- eu.nsrsdk.v3java.NSRActivityWebView$12
- eu.nsrsdk.v3java.NSRActivityWebView$2
- eu.nsrsdk.v3java.NSRActivityWebView$3
- eu.nsrsdk.v3java.NSRActivityWebView$4
- eu.nsrsdk.v3java.NSRActivityWebView$5
- eu.nsrsdk.v3java.NSRActivityWebView$5$1
- eu.nsrsdk.v3java.NSRActivityWebView$6
- eu.nsrsdk.v3java.NSRActivityWebView$7
- eu.nsrsdk.v3java.NSRActivityWebView$8
- eu.nsrsdk.v3java.NSRActivityWebView$9
-eu/nsrsdk/v3java/NSRPower.java
- eu.nsrsdk.v3java.NSRPower
+eu/nsrsdk/v3java/NSR.java
+ eu.nsrsdk.v3java.NSR
+ eu.nsrsdk.v3java.NSR$1
+eu/nsrsdk/v3java/NSRDefaultSecurity.java
+ eu.nsrsdk.v3java.NSRDefaultSecurity
+ eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequest
+ eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequestCustom
+ eu.nsrsdk.v3java.NSRDefaultSecurity$AsynchRequestCustom$1
