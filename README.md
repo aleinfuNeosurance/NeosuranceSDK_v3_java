@@ -28,7 +28,7 @@ it, simply add the following line to your project (see also [NSR SDK v3 JavaExam
 	```gradle
 	dependencies {
 		...
-		implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.19'
+		implementation 'com.github.aleinfuNeosurance:NeosuranceSDK_v3_java:3.0.20'
 	}
 	```
 
