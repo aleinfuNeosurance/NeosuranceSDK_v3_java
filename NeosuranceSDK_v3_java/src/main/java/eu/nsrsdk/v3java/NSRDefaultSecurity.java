@@ -1,18 +1,12 @@
 package eu.nsrsdk.v3java;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 
 import androidx.annotation.RequiresApi;
-import androidx.core.os.HandlerCompat;
-import androidx.fragment.app.FragmentActivity;
-
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
@@ -35,7 +29,7 @@ import eu.nsrsdk.utils.NSRUtils;
 @RequiresApi(api = Build.VERSION_CODES.KITKAT)
 public class NSRDefaultSecurity implements NSRSecurityDelegate {
 
-	public static String TAG = "NSRNetworkAdapter";
+	public static String TAG = "NSRDefaultSecurity - NSRNetworkAdapter";
 	private static NSRSecurityDelegate NSRnwa = null;
 	private Context context = null;
 
@@ -44,7 +38,7 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 	public void secureRequest(final Context ctx, final String endpoint, final JSONObject payload, final JSONObject headers, final NSRSecurityResponse completionHandler) throws Exception {
 		try {
 			final String url = NSRUtils.getSettings(ctx).getString("base_url") + endpoint;
-			NSRLog.d("NSRDefaultSecurity - NSRNetworkAdapter: " + url);
+			NSRLog.d(TAG + ": " + url);
 
 			if(executorService == null) {
 				executorService = Executors.newFixedThreadPool(1);
@@ -53,46 +47,126 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 			executorService.execute(new Runnable() {
 				@Override
 				public void run() {
-					doInBackground(url, payload, headers, completionHandler);
+					doInBackground(url, "POST", payload, headers, completionHandler);
 				}
 			});
 
-			//AsynchRequest asynchRequest = new AsynchRequest(url, payload, headers, completionHandler);
-			//asynchRequest.execute();
 		} catch (Exception e) {
 			NSRLog.e(e.getMessage());
 			throw e;
 		}
 	}
 
-	private void doInBackground(final String url, final JSONObject payload, final JSONObject headers, final NSRSecurityResponse completionHandler){
+	private void doInBackground(final String urlString, String method, final JSONObject payload, final JSONObject headers, final NSRSecurityResponse completionHandler){
 
-		NSRHttpRunner httpRunner = null;
 		try {
-			httpRunner = new NSRHttpRunner(url);
-			if (payload != null)
-				httpRunner.payload(payload.toString(), "application/json");
 
-			if (headers != null) {
+			URL url = new URL(urlString);
+			HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
+			urlConnection.setRequestProperty("Content-Type", "application/json");
+
+
+			if(headers != null && headers.length() > 0){
+
 				Iterator<String> keys = headers.keys();
-				while (keys.hasNext()) {
+
+				while(keys.hasNext()){
 					String key = keys.next();
-					httpRunner.header(key, headers.getString(key));
+					String value = headers.getString(key);
+					urlConnection.setRequestProperty(key,value);
+				}
+
+			}
+
+			urlConnection.setConnectTimeout(120000);
+			urlConnection.setReadTimeout(120000);
+
+			Log.d(TAG,"ExecutorService - doInBackground - ConnectTimeout: 120sec, ReadTimeout: 120sec");
+
+			urlConnection.setRequestMethod(method);
+			urlConnection.connect();
+
+			if(method.equals("POST") || method.equals("PUT")){
+				OutputStreamWriter out = new OutputStreamWriter(urlConnection.getOutputStream());
+				out.write(payload.toString());
+				out.close();
+			}
+
+			// Check the connection status.
+			int statusCode = urlConnection.getResponseCode();
+			String statusMsg = urlConnection.getResponseMessage();
+
+			//CONNECTION_SUCCESS
+			if (statusCode == 200) {
+
+				InputStream it = new BufferedInputStream(urlConnection.getInputStream());
+				InputStreamReader read = new InputStreamReader(it);
+				BufferedReader buff = new BufferedReader(read);
+				StringBuilder dta = new StringBuilder();
+				String chunks;
+				while ((chunks = buff.readLine()) != null) {
+					dta.append(chunks);
+				}
+				String returndata = dta.toString();
+
+				Bundle bundle = new Bundle();
+				bundle.putString("jsonString",returndata);
+				Message msg = new Message();
+				msg.setData(bundle);
+				//completionHandler.handleMessage(msg);
+
+				NSRLog.d(TAG + " >> response: " + msg);
+				completionHandler.completionHandler(new JSONObject(returndata), null);
+
+			}
+			//401, 500, etc...
+			else if(statusCode != 200){
+				String exceptionString = TAG + " >> statusCode: " + statusCode + ", statusMsg: " + statusMsg + " ";
+				NSRLog.e(exceptionString);
+
+				try {
+					completionHandler.completionHandler(null, exceptionString);
+				} catch (Exception ee) {
+					NSRLog.e(ee.toString());
 				}
 			}
-			String response = httpRunner.read();
-			NSRLog.d("NSRDefaultSecurity - NSRNetworkAdapter - response:" + response);
-			completionHandler.completionHandler(new JSONObject(response), null);
-		} catch (Exception e) {
+
+		} catch (ProtocolException e) {
+			NSRLog.e(e.getMessage());
+
 			try {
-				if (httpRunner != null) {
-					NSRLog.e("MSG:" + httpRunner.getMessage());
-					NSRLog.e("Error:" + e.getMessage());
-				}
-				completionHandler.completionHandler(null, e.toString());
+				completionHandler.completionHandler(null, e.getMessage());
 			} catch (Exception ee) {
 				NSRLog.e(ee.toString());
 			}
+
+		} catch (MalformedURLException e) {
+			NSRLog.e(e.getMessage());
+
+			try {
+				completionHandler.completionHandler(null, e.getMessage());
+			} catch (Exception ee) {
+				NSRLog.e(ee.toString());
+			}
+
+		} catch (IOException e) {
+			NSRLog.e(e.getMessage());
+
+			try {
+				completionHandler.completionHandler(null, e.getMessage());
+			} catch (Exception ee) {
+				NSRLog.e(ee.toString());
+			}
+
+		} catch (Exception e) {
+			NSRLog.e(e.getMessage());
+
+			try {
+				completionHandler.completionHandler(null, e.getMessage());
+			} catch (Exception ee) {
+				NSRLog.e(ee.toString());
+			}
+
 		}
 
 	}
