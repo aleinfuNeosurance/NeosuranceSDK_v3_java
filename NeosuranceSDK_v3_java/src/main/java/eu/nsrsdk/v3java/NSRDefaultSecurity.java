@@ -47,7 +47,8 @@ public class NSRDefaultSecurity implements NSRSecurityDelegate {
 			executorService.execute(new Runnable() {
 				@Override
 				public void run() {
-					doInBackground(url, "POST", payload, headers, completionHandler);
+					String method = (url.contains("?") && url.split("\\?").length > 1) ? "GET" : "POST";
+					doInBackground(url, method, payload, headers, completionHandler);
 				}
 			});
 

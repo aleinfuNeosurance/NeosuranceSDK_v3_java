@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="eu.nsrsdk.v3java"
     android:versionCode="21"
-    android:versionName="3.0.21" >
+    android:versionName="3.0.22" >
 
     <uses-sdk
         android:minSdkVersion="24"
