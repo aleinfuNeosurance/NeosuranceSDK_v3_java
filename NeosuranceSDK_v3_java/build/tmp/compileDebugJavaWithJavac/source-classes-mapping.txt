@@ -47,6 +47,7 @@ eu/nsrsdk/v3java/NSRFences.java
  eu.nsrsdk.v3java.NSRFences$1
 eu/nsrsdk/utils/NSRUtils.java
  eu.nsrsdk.utils.NSRUtils
+ eu.nsrsdk.utils.NSRUtils$1
 eu/nsrsdk/v3java/NSRTrace.java
  eu.nsrsdk.v3java.NSRTrace
 eu/nsrsdk/v3java/NSRSecurityResponse.java
@@ -83,8 +84,9 @@ eu/nsrsdk/v3java/NSRActivityWebView.java
  eu.nsrsdk.v3java.NSRActivityWebView$1
  eu.nsrsdk.v3java.NSRActivityWebView$10
  eu.nsrsdk.v3java.NSRActivityWebView$11
- eu.nsrsdk.v3java.NSRActivityWebView$11$1
  eu.nsrsdk.v3java.NSRActivityWebView$12
+ eu.nsrsdk.v3java.NSRActivityWebView$12$1
+ eu.nsrsdk.v3java.NSRActivityWebView$13
  eu.nsrsdk.v3java.NSRActivityWebView$2
  eu.nsrsdk.v3java.NSRActivityWebView$3
  eu.nsrsdk.v3java.NSRActivityWebView$4

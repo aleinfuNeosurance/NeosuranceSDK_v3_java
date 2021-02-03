@@ -524,6 +524,14 @@ public class NSR {
 
 	//********** UTILS **********//
 
+	public void policies(final JSONObject criteria, final NSRSecurityResponse responseHandler){
+		NSRUtils.policies(criteria, responseHandler, ctx);
+	}
+
+	public void closeView(){
+		NSRUtils.closeView();
+	}
+
 	public void showApp() {
 		if (NSRUtils.getAppURL(ctx) != null)
 			showUrl(NSRUtils.getAppURL(ctx), null);
